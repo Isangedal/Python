@@ -170,58 +170,33 @@ function encrypt1(str) {
     }
     return value;
 }
-function encrypt2(str, EorD) {
+function encrypt2(str) {
     let value = "";
     let pos = 0;
-    if (EorD == "e") {
-        for (const s of str) {
-            ignoring = false;
-            for (const i of ignore) {
-                if (i == s) {
-                    value += s;
-                    ignoring = true;
-                    break
-                }
+    for (const s of str) {
+        ignoring = false;
+        for (const i of ignore) {
+            if (i == s) {
+                value += s;
+                ignoring = true;
+                break
             }
-            if (!ignoring) {
-                if (s === "?" || s === "!" || s === "_" || s === " ") {
-                    value += s;
-                }
-                else if (str[pos+1] == "#") {
-                    if (s == "1") value += "b"
-                    else value += encryption2[Number(s)].toLowerCase();
-                }
-                else if (s === "#") value += "";
-                else if (s === s.toUpperCase()) {
-                    if (s == "1") value += "B"
-                    else value += encryption2[Number(s)];
-                }
-            }
-            pos++;
         }
-    } else if (EorD == "d") {
-        for (const s of val) {
-            ignoring = false;
-            for (const i of ignore) {
-                if (i == s) {
-                    value += s;
-                    ignoring = true;
-                    break
-                }
+        if (!ignoring) {
+            if (s === "?" || s === "!" || s === "_" || s === " ") {
+                value += s;
             }
-            if (!ignoring) {
-                if (val[pos+1] == "#") {
-                    if (val[pos+2] == "?") value += encryption2_lc[s][1];
-                    else if (val[pos+2] == "!") value += encryption2_lc[s][2];
-                    else value += encryption2_lc[s][0];
-                }
-                else if (s == "?" || s == "!" || s == "#") value += "";
-                else if (val[pos+1] == "!") value += encryption2[s][2];
-                else if (val[pos+1] == "?") value += encryption2[s][1];
-                else value += encryption2[s][0];
+            else if (str[pos+1] == "#") {
+                if (s == "1") value += "b"
+                else value += encryption2[Number(s)].toLowerCase();
             }
-            pos++;
+            else if (s === "#") value += "";
+            else if (s === s.toUpperCase()) {
+                if (s == "1") value += "B"
+                else value += encryption2[Number(s)];
+            }
         }
+        pos++;
     }
     return value;
 }
