@@ -1,0 +1,12 @@
+{
+  "name": "encryption2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Encryption.js",
+  "scripts": {
+    "run": "node Encryption.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -305,7 +305,7 @@ def match_start(p): # Match start function. 'p' = Player number
         play_card(1, True, 0) # Player 1 plays the first card
         return # Returns
 
-    hands[p] = ["null"] # Sers hand to "null" to avoid an error
+    hands[p] = ["null"] # Set hand to "null" to avoid an error
     draw_card(p, 7) # Give the current player 7 cards to begin
     del(hands.get(p)[0]) # Delete the "null" card added above
 

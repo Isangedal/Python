@@ -1,7 +1,7 @@
 questions = ["What's 0 / 0?", "Do you like cats?",
-             "Do you like dogs?", "What is 9+10?", "Which is better? Discord or Skype?", "Is Fortnite dead?", "From 1-10 how cringy is tiktok?", "Fill in the blank: Haha game go ____", "What does the 1st digit of all binary code signify?", "Which question are you on?", "What language is this: 25?"]
+             "Do you like dogs?", "What is 9+10?", "Which is better? Discord or Skype?", "Is Fortnite dead?", "From 1-10 how cringy is tiktok?", "Fill in the blank: Haha game go ____", "What does the 1st digit of all binary code signify?", "Which question are you on?", "What language is this: 25?", "Are you gay?"]
 
-answers = ["NaN", "Yes", "Yes", "19", "Discord", "Yes", "10", "brrr", "Idk", "10", "Numbers"]
+answers = ["NaN", "Yes", "Yes", "19", "Discord", "Yes", "10", "brrr", "Idk", "10", "Numbers", "Yes"]
 
 startLives = 3
 
